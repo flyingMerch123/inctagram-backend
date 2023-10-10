@@ -9,15 +9,17 @@ WORKDIR /home/node/dist/app
 
 COPY --chown=node package*.json ./
 
-RUN npm install
+RUN npm install yarn
+
+RUN yarn install
 
 ENV PORT=3119
 
 COPY --chown=node . .
 
-RUN npm run build
+RUN yarn run build
 
 
 EXPOSE ${PORT}
 
-CMD [ "npm", "run", "start" ]
+CMD [ "yarn", "run", "prod" ]
