@@ -8,7 +8,7 @@ const logger: Logger = new Logger('bootstrap');
 
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
-  app.setGlobalPrefix('api');
+  app.setGlobalPrefix('api/v1');
 
   const config = app.get<ConfigService>(ConfigService);
 
