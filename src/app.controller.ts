@@ -7,6 +7,6 @@ export class AppController {
 
   @Get()
   getHello(): string {
-    return 'Hello Server\n';
+    return 'Hello Server! Deploy\n';
   }
 }
